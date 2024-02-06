@@ -271,13 +271,32 @@ the stingray source directory.
 Using Stingray
 ===============
 
-Getting started
----------------
+A Spectral timing exploration
+-----------------------------
 
+In this Tutorial, we will show an example spectral timing exploration of a
+black hole binary using NICER data. The tutorial includes a hardness-intensity
+diagram, the modeling of the power density spectrum, power colors, lag-frequency,
+lag-energy, and rms/covariance spectra.
+
+.. toctree::
+   :maxdepth: 1
+
+   notebooks/Spectral Timing/Spectral Timing Exploration.ipynb
+
+
+Stingray fundamentals
+---------------------
 .. toctree::
    :maxdepth: 2
 
    core
+
+More Analysis Examples
+----------------------
+.. toctree::
+   :maxdepth: 2
+
    dataexplo
    pulsar
 
