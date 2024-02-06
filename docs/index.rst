@@ -291,14 +291,11 @@ Stingray fundamentals
    :maxdepth: 2
 
    core
-
-More Analysis Examples
-----------------------
-.. toctree::
-   :maxdepth: 2
-
    dataexplo
    pulsar
+   modeling
+   simulator
+   deadtime
 
 Advanced
 --------
@@ -307,9 +304,6 @@ Advanced
    :maxdepth: 2
 
    timeseries
-   modeling
-   simulator
-   deadtime
    api
 
 Additional information
