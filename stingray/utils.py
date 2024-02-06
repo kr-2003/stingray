@@ -6,6 +6,7 @@ import random
 import string
 import sys
 import warnings
+import logging
 import tempfile
 from collections.abc import Iterable
 
@@ -32,8 +33,8 @@ try:
 
     pyfftw.interfaces.cache.enable()
     HAS_PYFFTW = True
+    logging.info("Using PyFFTW")
 except ImportError:
-    warnings.warn("pyfftw not installed. Using standard scipy fft")
     from numpy.fft import ifft, fft, fftfreq, fftn, ifftn, fftshift, fft2, ifftshift, rfft, rfftfreq
 
     HAS_PYFFTW = False
