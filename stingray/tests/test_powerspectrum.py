@@ -357,6 +357,17 @@ class TestPowerspectrum(object):
 
         cls.lc = Lightcurve(time, counts=poisson_counts, dt=dt, gti=[[tstart, tend]])
 
+    def test_single_ps_of_lc_with_tight_gtis_does_not_crash(self):
+        tstart = 1.0
+        tend = 10.0
+        gti = [[1.0, 9.0]]
+
+        time = np.linspace(tstart, tend, 10000)
+        counts = np.random.poisson(10, size=time.shape[0])
+
+        lc = Lightcurve(time, counts, gti=gti)
+        Powerspectrum(lc, norm="leahy")
+
     @pytest.mark.parametrize("skip_checks", [True, False])
     def test_initialize_empty(self, skip_checks):
         cs = Powerspectrum(skip_checks=skip_checks)
