@@ -2295,8 +2295,12 @@ def avg_pds_from_events(
         the mean flux
     """
     if segment_size is None:
-        segment_size = gti.max() - gti.min()
-    n_bin = int(segment_size / dt)
+        n_bin = times.size
+        segment_size = n_bin * dt
+        gti = [[times[0] - dt / 2, times[-1] + dt / 2]]
+    else:
+        n_bin = int(segment_size / dt)
+
     if fluxes is None:
         dt = segment_size / n_bin
     else:
@@ -2399,8 +2403,12 @@ def avg_cs_from_events(
         the number of averaged periodograms
     """
     if segment_size is None:
-        segment_size = gti.max() - gti.min()
-    n_bin = int(segment_size / dt)
+        n_bin = times1.size
+        segment_size = n_bin * dt
+        gti = [[times1[0] - dt / 2, times1[-1] + dt / 2]]
+    else:
+        n_bin = int(segment_size / dt)
+
     # adjust dt
     # dt = segment_size / n_bin
     if fluxes1 is None and fluxes2 is None:
