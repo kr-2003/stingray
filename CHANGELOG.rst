@@ -32,7 +32,7 @@ Bug Fixes
 - Various bug fixes in DynamicalPowerspectrum, on event loading and time rebinning (`#779 <https://github.com/StingraySoftware/stingray/pull/779>`__)
 - Fix issue with the Poisson noise calculation in lag spectra, that produced NaN errors under some conditions (`#789 <https://github.com/StingraySoftware/stingray/pull/789>`__)
 - Fix rms computation and error bars (`#792 <https://github.com/StingraySoftware/stingray/pull/792>`__)
-
+- Fix issue with ``Powerspectrum`` of a single light curve (`#663 <https://github.com/StingraySoftware/stingray/pull/663>`__)
 
 Breaking Changes
 ^^^^^^^^^^^^^^^^
